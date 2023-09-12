@@ -17,15 +17,16 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-    """Get a dictionary representation of the Student
-    If attrs is a list of strings, only attribute names
-    contained in this list must be retrieved.
-    Arguments:
-    attrs: The attributes to represent
-    """
-    if (type(attrs) == list and all(type(element) == str for element in attrs)):
-        return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
-    return self.__dict__
+        """Get a dictionary representation of the Student
+        If attrs is a list of strings, only attribute names
+        contained in this list must be retrieved.
+        Arguments:
+        attrs: The attributes to represent
+        """
+        if (type(attrs) == list and
+                all(type(element) == str for element in attrs)):
+            return {at: getattr(self, at) for at in attrs if hasattr(self, at)}
+        return self.__dict__
 
     def reload_from_json(self, json):
         """Replace all attributes of the Student instance.
