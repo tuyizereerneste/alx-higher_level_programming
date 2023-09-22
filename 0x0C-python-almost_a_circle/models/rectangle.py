@@ -96,7 +96,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y,
                 self.width, self.height)
-    
+
     def update(self, *args, **kwargs):
         """Update attributes of the Rectangle using positional arguments."""
         if args:
