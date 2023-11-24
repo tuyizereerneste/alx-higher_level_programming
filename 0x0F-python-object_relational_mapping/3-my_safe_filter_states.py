@@ -16,7 +16,8 @@ if __name__ == "__main__":
                                  port=3306
                                  )
     curs = connection.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE %s", (sys.argv[4], ))
+    data = sys.argv[4]
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (data, ))
     rows = curs.fetchall()
     for row in rows:
         print(row)
