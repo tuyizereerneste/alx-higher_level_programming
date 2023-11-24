@@ -12,7 +12,7 @@ if __name__ == "__main__":
                                     port=3306
                                     )
     curs = connection.cursor()
-    curs.execute("SELECT * FROM states") 
+    curs.execute("SELECT * FROM states")
     rows = curs.fetchall()
     for row in rows:
         print(row)
