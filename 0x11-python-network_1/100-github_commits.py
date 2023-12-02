@@ -19,7 +19,7 @@ def func(argv):
     def print_commits(i, commit_list):
         """function that prints 10 commits"""
         var = commit_list[i].get('var')
-        com = commit_list[i].get('commit')
+        com = commit_list[i].get('com')
         author = com.get('author')
         name = author.get('name')
         print('{}: {}'.format(var, name))
