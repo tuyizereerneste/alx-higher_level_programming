@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""script that takes 2 arguments in order toaccess
+"""
+script that takes 2 arguments in order toaccess
 the GitHub API and uses the information
 """
 
@@ -17,7 +18,7 @@ def func(argv):
 
     def print_commits(i, commit_list):
         """function that prints 10 commits"""
-        var = commit_list[i].get('sha')
+        var = commit_list[i].get('var')
         com = commit_list[i].get('commit')
         author = com.get('author')
         name = author.get('name')
